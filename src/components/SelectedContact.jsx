@@ -17,16 +17,17 @@ export default function SelectedContact({  selectedContactId, setSelectedContact
       }, []);
     console.log (contact);
     console.log (selectedContactId);
-    return (
-    <div>
-        {contact && 
+    return(
+    <div >
+    {contact && 
         <ul>
-        <li>{contact.address.street}</li>
-        <li>{contact.address.city}</li>
+        <li>{contact.name}</li> 
         <li>{contact.email}</li>
-        <li>{contact.phone}</li>
-      </ul>}
-    </div>)
-} 
-
-
+        <li>{contact.phone}</li>     
+        <li>{contact.address.street} {contact.address.suite}</li>
+        <li>{contact.address.city}</li>
+        <li>{contact.address.zipcode}</li>
+        </ul>}
+        </div>) 
+  }
+    
