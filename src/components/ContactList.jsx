@@ -47,3 +47,4 @@ export default function ContactList({ setSelectedContactId }) {
         </table>
     ); 
 }
+
