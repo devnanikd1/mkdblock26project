@@ -48,3 +48,20 @@ export default function ContactList({ setSelectedContactId }) {
     ); 
 }
 
+export default function SelectedContact({  selectedContactId, setSelectedContactId }){
+  // ... other code ...
+  
+  return(
+      <div>
+      {contact && 
+          <ul>
+          <li>{contact.name}</li> 
+          <li>{contact.email}</li>
+          <li>{contact.phone}</li>     
+          <li>{contact.address.street} {contact.address.suite}</li>
+          <li>{contact.address.city}</li>
+          <li>{contact.address.zipcode}</li>
+          </ul>}
+      <button onClick={() => setSelectedContactId(null)}>Go Back</button>
+      </div>) 
+}
